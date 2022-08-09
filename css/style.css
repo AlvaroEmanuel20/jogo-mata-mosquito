@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    cursor: url(../imagens/mata_mosquito.png) 30 30, auto;
+}
+
+body {
+    background: url(../imagens/bg.jpg) no-repeat;
+    height: 100vh;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mosquito1 {
+    width: 50px;
+    height: 50px;
+}
+
+.mosquito2 {
+    width: 70px;
+    height: 70px;
+}
+
+.mosquito3 {
+    width: 90px;
+    height: 90px;
+}
+
+.ladoB {
+    transform: scaleX(-1);
+}
+
+.painel {
+    position: absolute;
+    width: 230px;
+    padding: 20px;
+    border-radius: 0 15px 0 0;
+    box-shadow: 3px 3px 10px black;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #fff;
+    background: #fff;
+    opacity: 0.7;
+}
+
+.vidas {
+    float: left;
+    padding-bottom: 10px;
+}
+
+.tempo {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container-conteudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    height: 45px;
+    width: 250px;
+    background: #5A7997;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px black;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#nivel-jogo {
+    margin-bottom: 15px;
+    width: 150px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px black;
+    height: 40px;
+    outline: none;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    .imagem-grande {
+        width: 320px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+    body {
+        background-size: auto;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagens/mosquito.png" type="image/x-icon">
+    <title>Iniciar Jogo</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-conteudo">
+            <img class="imagem-grande" src="imagens/game.png" alt="jogo mata mosquito">
+            <select name="nivel" id="nivel-jogo">
+                <option value="">Selecione o nível:</option>
+                <option value="normal" id="normal">Normal</option>
+                <option value="profissional" id="profissional">Profissional</option>
+                <option value="modo-maluco" id="modo-maluco">Modo Maluco</option>
+            </select>
+            <button onclick="iniciarJogo()">Iniciar Jogo</button>
+        </div>
+    </div>
+    
+    <script>
+        function iniciarJogo () {
+            var nivel = document.getElementById('nivel-jogo').value
+            if (nivel != '') {
+                window.location.href = 'mata_mosquito.html?' + nivel
+            } else {
+                alert("Selecione um nível para iniciar o jogo.")
+                return false
+            }
+        }
+    </script>
+
+</body>
+
+</html>
